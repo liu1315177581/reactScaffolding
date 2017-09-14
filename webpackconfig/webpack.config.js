@@ -57,6 +57,7 @@ module.exports = {
 			},
             {
                 test: /\.css$/,
+                include:path.resolve(__dirname,'app'),
                 use: [ 
                         'style-loader', 
                         { 
@@ -76,6 +77,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
+                include:path.resolve(__dirname,'app'),
                 use: [
                     {
                     loader: 'url-loader',
@@ -87,6 +89,7 @@ module.exports = {
             },  // 限制大小5kb
             { 
                 test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, 
+                include:path.resolve(__dirname,'app'),
                 use:[
                     {
                         loader:'url-loader',
